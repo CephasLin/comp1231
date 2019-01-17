@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script week2 - practice</title>
+</head>
+<body>
+    <script>
+        let myNum =3;
+        document.write("We are starting with the number "+ myNum);
+        document.write("<br>");
+
+        myNum += 8;
+        document.write("Add 8 to this number result in: " +myNum );
+        document.write("<br>");
+
+        myNum -=4;
+        document.write("Subcting 4 to this number result in: " +myNum);
+        document.write("<br>");
+
+        myNum *=5;
+        document.write("Multiplying this number by 5 results in: " +myNum);
+        document.write("<br>");
+
+        myNum /=7;
+        document.write("Dividing this number by 7 results in: " +myNum);
+        document.Write("<br>");
+
+        myNum ++;
+        document.write("Add 1 to this number result in: " +myNum );
+        document.write("<br>");
+
+        myNum-- ;
+        document.write("Decrese 1 to this number result in: " +myNum);
+        document.write("<br>");
+
+        myNum %=2;
+        document.write("Using the modulus operator and dividing this number by 2 results in: " +myNum);
+        document.write("<br>");
+       
+    </script>
+</body>
+</html>
