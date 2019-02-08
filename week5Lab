@@ -1,0 +1,195 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id= "loop1">
+        <h1>For loop</h1>
+    </div>
+    <div id= "loop2">
+            <h1>While Loop</h1>
+        </div>
+    <div id= "loop3">
+            <h1>Any Loop</h1>
+        </div>
+    <div id= "loop4">
+            <h1>Different Loop</h1>
+        </div>
+
+    <div id="loop5">
+            <h1>Task 5</h1>
+    </div>
+
+    <div id="loop6">
+            <h1>Task 6</h1>
+    </div>
+
+    <div id="loop7">
+            <h1>Task 7</h1>
+    </div>
+
+    <div id="loop8">
+            <h1>Task 8</h1>
+    </div>
+    
+    <script>
+        /**Task 1
+            Using a for loop
+            Count up from 0 to 300 by 15s*/
+            let separater = " ";
+
+        let loop1Div = document.getElementById("loop1");
+            for(let i= 0; i<=300; i++){
+                loop1Div.innerHTML += separater + i;
+            }
+
+        document.write(`<hr>`);
+        /**Task 2
+            Using a while loop
+            Count down from 500 to 0 by 25s
+
+        */
+        let loop2Div = document.getElementById("loop2");   
+        let n = 500;
+            while(n>=0){
+                loop2Div.innerHTML += separater + n;
+                //document.write(`${n} `);
+                n--;
+            }
+
+        /**
+         * Task 3
+            Using any loop
+            Count from 2 to 256 by powers of two
+            2 4 8 16 32 64 128 256
+        */
+        let loop3Div = document.getElementById("loop3");
+        let index = 1;
+        for(;index<256;){
+            index*=2;
+            loop3Div.innerHTML += separater+index;
+        }
+
+        /**
+         * Task 4
+                    Complete Task 3 but using another loop structure
+        */
+        let loop4Div = document.getElementById("loop4");
+        let r=1;
+        while(r<256){
+            r*=2;
+            loop4Div.innerHTML += separater + r;
+            
+        }
+
+        /**
+         * Task 5
+        Complete this task using a do-while loop
+        Continually ask the user for a positive number
+        When the user has inputted a positive number
+        escape the loop
+        output to screen the positive number
+        */
+
+       /*let loop5Div = document.getElementById("loop5");
+       let x=0;
+       do{
+           x = prompt("Entere a negtive numebr(enter a positive number to stop):  ");
+           x = parseInt(x);
+           
+       }while(x<=0)
+       loop5Div.innerHTML += x;
+       */
+       /**
+        * Task 
+        Continually ask the user for a number until they have inputted a value between the range of 50-75
+        Escape the loop and display a congrats message
+       */
+
+       let loop6Div = document.getElementById("loop6");
+        let k = 0;
+        let guess = 60;
+        do{
+            k =prompt("Enter a number between 50-75:");
+            k = parseInt(k);
+            if(k>guess){
+                alert("too high");
+            }
+            if(k< guess){
+                alert("too low");
+            }
+              
+        }while(k!=guess )
+        loop6Div.innerHTML += k;
+
+        /**
+         * Task 7
+        Count up from 1-20 
+        Skip the numbers 6 and 13
+        */
+
+        let loop7Div = document.getElementById("loop7");
+        let s = 0;
+        do{
+            s++;
+            
+            if(s==6||s==13){
+                s++;
+            }
+            loop7Div.innerHTML += separater +s;
+        }while(s<20)
+
+        /**
+         * Task 8
+            Count down from 60 to 12 by 3s
+            Skip the odd numbers
+        */
+        
+        let loop8Div = document.getElementById("loop8");
+        let c = 60;
+        for(;c>=12;){
+            if(c%2==0){
+                loop8Div.innerHTML += separater +c;
+            }
+            c--;
+        }
+        /**
+         * Task 9
+        Using object syntax
+        Create an array variable with 6 elements
+        The array must contain 3 distinct data types
+        */
+       let arr_1 = new Array("Hello world!", "GBC", true, 1, 12.3, false);
+
+        /*
+        Task 10
+        Complete task 1 using the literal syntax
+        */
+        let arr_2 = ["Hello world!", "GBC", true, 1, 12.3, false];
+        /**
+         * Task 11
+         Create an array of 100 empty elements
+        */
+        let arr_3 = new Array(99);
+        /**Task 12
+         * Create an array of 5 elements
+             Update the second element to a new value
+            Remove the fourth element
+            Output the result of using the length property
+        */
+        let arr_4 = new Array("hello", 12, 3.12, "Frank", true);
+        arr_4[1] = 21;
+        delete arr_4[3];
+        console.log(arr_4[arr_4.length]);
+    </script>
+    
+     
+        
+    
+    
+</body>
+</html>
