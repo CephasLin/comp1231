@@ -45,5 +45,82 @@ function addSpace(string3, num3){
 }
 task3.innerHTML += addSpace('Space',2);
 
+let task4 = document.getElementById("task_4");
+function oppCase(string4,pos){
+    let s = '';
+    if(pos=='odd'){
+        for(let i = 0; i<string4.length;i++){  
+            if(i%2==1){
+                s+= string4[i];
+            }else{
+                let n = string4.charCodeAt(i);
+                if(n>97){
+                    s+= String.fromCharCode(n-32);
+                }
+                else{
+                    s+= String.fromCharCode(n+32);
+                }
+            }  
+        }
+    }
+    if(pos=='even'){
+        for(let i = 0; i<string4.length;i++){
+            if(i%2==0){
+                s+= string4[i];
+            }else{
+                let n = string4.charCodeAt(i);
+                if(n>97){
+                    s+= String.fromCharCode(n-32);
+                }
+                else{
+                    s+= String.fromCharCode(n+32);
+                }
+            }  
+        }
+    }
+    return s;
+    
+}
+task4.innerHTML += oppCase('AbcD','even');
 
+let task5 = document.getElementById("task_5");
+function reverse(string5){
+    let s = '';
+    for(let i =string5.length-1; i>=0;i--){
+        s+= string5[i];
+    }
+    return s;
+}
+task5.innerHTML += reverse("abc");
+
+/*let task6 = document.getElementById("task_6");
+function conca(string6,string61){
+    let s = '';
+    
+}*/
+let task7=document.getElementById("task_7");
+function removeFrontSpace(string7){
+    let s = '';
+    for(let i = 0; i < string7.length;i++){
+        let n = string7.charCodeAt(i);
+        if(n>=32){
+            s+= string7[i];
+        }
+    }
+    return s; 
+}
+task7.innerHTML +=removeFrontSpace("\nvalue \ta");
+
+let task8 = document.getElementById("task_8");
+function removeSpace(string8){
+    let s = '';
+    for(let i = 0; i < string8.length;i++){
+        let n = string8.charCodeAt(i);
+        if(n!=9 && n!=10 && n!=32){
+            s+=string8[i];
+        }
+    }
+    return s;
+}
+task8.innerHTML += removeSpace("\n value \t abc");
 
