@@ -1,4 +1,6 @@
 ```javascript
+[Project link](https://codepen.io/frank_lin/pen/OqwWBy)
+
 let task1 = document.getElementById("task_1");
 function random(number){
     var s = '';
